@@ -25,11 +25,11 @@ You may use `%domain.tld` to generate random email address(es).
     $ sudo vmailmgr.py add "%@obfuscated.example.com"
 ___
 If you want to use `vmailmgr.py` with multiple configuration files, write
-wrapper scripts and set `VMAILMGR_CONFIG` accordingly.
+wrapper scripts and set `VMAILMGRPY_CONFIG` accordingly.
 
 Debugging
 ---------
-You may set the env variable `VMAILMGR_DEBUG` to anything and `vmailmgr.py` will
+You may set the env variable `VMAILMGRPY_DEBUG` to anything and `vmailmgr.py` will
 not execute the `postmap` and `daemon_reload` commands. See the `configuration`
 section for further information.
 

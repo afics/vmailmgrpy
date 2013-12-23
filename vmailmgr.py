@@ -21,7 +21,8 @@ class EmailAddr():
             self.user, self.domain = email.split("@")
         except ValueError:
             raise ValueError("Email address '{}' is invalid. ".format(email)
-                           + "Multiple at symbols are not allowed.") from None
+                           + "Multiple at symbols are not allowed. "
+                           + "Or the @ is missing.") from None
 
         # % -> used to recognize random addrs in VirtualMailMgr()
         if self.user != "%" and re.match("^[a-z0-9._+-]+$", self.user) == None:

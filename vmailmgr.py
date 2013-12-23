@@ -24,7 +24,7 @@ class EmailAddr():
                            + "Multiple at symbols are not allowed.") from None
 
         # % -> used to recognize random addrs in VirtualMailMgr()
-        if self.user != "%" and re.match("^[a-z1-9._+-]+$", self.user) == None:
+        if self.user != "%" and re.match("^[a-z0-9._+-]+$", self.user) == None:
             raise ValueError("'%s' contains an invalid character!" % email)
 
     def __str__(self):
